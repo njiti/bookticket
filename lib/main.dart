@@ -1,3 +1,4 @@
+import 'package:bookticket/utils/app_styles.dart';
 import 'package:bookticket/widgets/bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primaryColor: primary,
       ),
       home: const BottomBar(),
     );
