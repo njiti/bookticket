@@ -1,3 +1,4 @@
+import 'package:bookticket/utils/app_layout.dart';
 import 'package:flutter/cupertino.dart';
 
 class TicketScreen extends StatelessWidget {
@@ -5,6 +6,9 @@ class TicketScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: const Text("Ticket"));
+    final size = AppLayout.getSize(context);
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+    );
   }
 }
