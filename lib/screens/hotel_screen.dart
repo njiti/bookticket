@@ -1,5 +1,4 @@
 import 'package:bookticket/utils/app_layout.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
