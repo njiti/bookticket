@@ -14,9 +14,9 @@ class TicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width*0.85,
-      height: AppLayout.getHeight(200),
+      height: 200,
       child: Container(
-        margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
+        margin: EdgeInsets.only(right: 16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -24,11 +24,12 @@ class TicketView extends StatelessWidget {
               showing the blue part of the card/ticket
              */
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   color: Color(0xFF526799),
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(21), topRight: Radius.circular(21)),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(21),
+                    topRight: Radius.circular(21)),
               ),
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               child: Column(
                 children: [
                   Row(
@@ -90,9 +91,9 @@ class TicketView extends StatelessWidget {
               color:Styles.orangeColor,
               child: Row(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
-                    width: 10,
+                    width: 20,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
                         color: Colors.white,
