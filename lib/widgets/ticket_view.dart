@@ -14,9 +14,9 @@ class TicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width*0.85,
-      height: 200,
+      height: AppLayout.getHeight(200),
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -24,9 +24,9 @@ class TicketView extends StatelessWidget {
               showing the blue part of the card/ticket
              */
             Container(
-              decoration: BoxDecoration(
-                  color: const Color(0xFF526799),
-                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(21), topRight: Radius.circular(21)),
+              decoration: const BoxDecoration(
+                  color: Color(0xFF526799),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(21), topRight: Radius.circular(21)),
               ),
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -48,7 +48,7 @@ class TicketView extends StatelessWidget {
                                   direction: Axis.horizontal,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   mainAxisSize: MainAxisSize.max,
-                                  children: List.generate((constraints.constrainWidth()/6).floor(), (index) => SizedBox(
+                                  children: List.generate((constraints.constrainWidth()/6).floor(), (index) => const SizedBox(
                                     width: 3, height: 1, child: DecoratedBox(decoration: BoxDecoration(
                                       color: Colors.white
                                   )),
@@ -58,7 +58,7 @@ class TicketView extends StatelessWidget {
                               },
                             ),
                           ),
-                          Center(child: Transform.rotate(angle: 1.5, child: Icon(Icons.local_airport_rounded, color: Colors.white))),
+                          Center(child: Transform.rotate(angle: 1.5, child: const Icon(Icons.local_airport_rounded, color: Colors.white))),
                         ],
                       )),
                       const ThickContainer(),
@@ -143,7 +143,7 @@ class TicketView extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 color: Styles.orangeColor,
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(21),
+                borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(21),
                   bottomRight: Radius.circular(21)
                 ),
               ),
